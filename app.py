@@ -2,11 +2,8 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return "Servidor funcionando! Acesse /matches para interagir."
 
-@app.route('/matches', methods=['POST'])
+@app.route('/', methods=['POST'])
 def create_match():
     try:
         match_data = request.get_json()
