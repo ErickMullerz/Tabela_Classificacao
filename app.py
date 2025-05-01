@@ -19,5 +19,12 @@ def create_match():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+def get_all_matches():
+    try:
+        return jsonify(matches), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 if __name__ == '__main__':
     app.run(debug=True)
