@@ -1,0 +1,8 @@
+CREATE TABLE classificacao (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    time TEXT NOT NULL,
+    pontos INTEGER NOT NULL
+);
+
+INSERT INTO classificacao (time, pontos) VALUES ('Time A', 10), ('Time B', 8), ('Time C', 12);
+
