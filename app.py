@@ -5,7 +5,8 @@ from models import get_classificacao
 app = Flask(__name__)
 
 def criar_tabela():
-    conn = sqlite3.connect('classificacao.db')
+    conn = sqlite3.connect('classificacao.db', check_same_thread=False)
+
     cur = conn.cursor()
     cur.execute('''
         CREATE TABLE IF NOT EXISTS partidas (
